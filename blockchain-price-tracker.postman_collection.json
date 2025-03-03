@@ -1,0 +1,73 @@
+{
+    "info": {
+      "_postman_id": "12345678-90ab-cdef-1234-567890abcdef",
+      "name": "Blockchain Price Tracker",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+      {
+        "name": "Get Prices (Last 24 Hours)",
+        "request": {
+          "method": "GET",
+          "header": [],
+          "url": {
+            "raw": "http://localhost:3000/api/prices",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "3000",
+            "path": ["api", "prices"]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Set Price Alert",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"chain\": \"ethereum\",\n  \"dollar\": 3000,\n  \"email\": \"your-email@example.com\"\n}"
+          },
+          "url": {
+            "raw": "http://localhost:3000/api/alerts",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "3000",
+            "path": ["api", "alerts"]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Get Swap Rate (ETH to BTC)",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"ethereumAmount\": 1\n}"
+          },
+          "url": {
+            "raw": "http://localhost:3000/api/swap",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "3000",
+            "path": ["api", "swap"]
+          }
+        },
+        "response": []
+      }
+    ]
+  }
+  

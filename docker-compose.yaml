@@ -1,0 +1,25 @@
+services:
+  app:
+    build: .
+    ports:
+      - "4000:3000"
+    depends_on:
+      - db
+    env_file:
+      - .env  # Explicit path
+  
+  db:
+    image: postgres
+    container_name: blockchain-db
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: blockchain
+    ports:
+      - "5432:5432"
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+
+volumes:
+  pg_data:
