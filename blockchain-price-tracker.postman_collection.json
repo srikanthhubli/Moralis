@@ -11,11 +11,11 @@
           "method": "GET",
           "header": [],
           "url": {
-            "raw": "http://localhost:3000/api/prices",
+            "raw": "http://localhost:4000/price",
             "protocol": "http",
             "host": ["localhost"],
-            "port": "3000",
-            "path": ["api", "prices"]
+            "port": "4000",
+            "path": ["prices"]
           }
         },
         "response": []
@@ -32,14 +32,14 @@
           ],
           "body": {
             "mode": "raw",
-            "raw": "{\n  \"chain\": \"ethereum\",\n  \"dollar\": 3000,\n  \"email\": \"your-email@example.com\"\n}"
+            "raw": "{\n  \"chain\": \"ethereum\",\n  \"dollar\": 4000,\n  \"email\": \"your-email@example.com\"\n}"
           },
           "url": {
-            "raw": "http://localhost:3000/api/alerts",
+            "raw": "http://localhost:4000/alert",
             "protocol": "http",
             "host": ["localhost"],
-            "port": "3000",
-            "path": ["api", "alerts"]
+            "port": "4000",
+            "path": ["alert"]
           }
         },
         "response": []
@@ -59,11 +59,11 @@
             "raw": "{\n  \"ethereumAmount\": 1\n}"
           },
           "url": {
-            "raw": "http://localhost:3000/api/swap",
+            "raw": "http://localhost:4000/swap",
             "protocol": "http",
             "host": ["localhost"],
-            "port": "3000",
-            "path": ["api", "swap"]
+            "port": "4000",
+            "path": [ "swap"]
           }
         },
         "response": []
